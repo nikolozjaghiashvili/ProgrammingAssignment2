@@ -1,3 +1,5 @@
+## This function creates a list of fuctions
+## which can cache the inverse of a matrix.
 makeMatrix <- function(x) {
   I <- NULL
   set <- function(y) {
@@ -12,6 +14,8 @@ makeMatrix <- function(x) {
        getInverse = getInverse)
 }
 
+## This function computes and returns the inverse of a square matrix
+## if the inverse has already been calculated, the function retrives cached value.
 cacheInverse <- function(x, ...) {
   I <- x$getInverse()
   if(!is.null(I)) {
